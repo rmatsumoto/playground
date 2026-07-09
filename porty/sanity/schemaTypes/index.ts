@@ -1,2 +1,5 @@
 import {postType} from './postType'
-export const schemaTypes = [postType]
+import {pageType} from './pageType'
+import {dogGalleryType} from './dogGalleryType'
+import {bootsGalleryType} from './bootsGalleryType'
+export const schemaTypes = [postType, pageType, dogGalleryType, bootsGalleryType]

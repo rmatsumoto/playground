@@ -5,30 +5,31 @@ export const pageType = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'title',
-      type: 'string',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'slug',
       type: 'slug',
       options: {source: 'title'},
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'publishedAt',
+      name: 'title',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'subTitle',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'lastUpdated',
       type: 'datetime',
       initialValue: () => new Date().toISOString(),
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'image',
-      type: 'image',
-    }),
-    defineField({
       name: 'body',
       type: 'array',
-      of: [{type: 'block'}],
+      of: [{type: 'block'}, {type: 'image'}],
     }),
   ],
 })
