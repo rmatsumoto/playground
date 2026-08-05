@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineArrayMember, defineField, defineType} from 'sanity'
 export const bootsGalleryType = defineType({
   name: 'bootsGallery',
   title: 'Boots Gallery',
@@ -42,17 +42,49 @@ export const bootsGalleryType = defineType({
     defineField({
       name: 'Sole',
       type: 'string',
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'URL',
       type: 'url',
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'Image',
       type: 'array',
-      of: [{type: 'image'}],
+      of: [
+        defineArrayMember({
+          type: 'object',
+          name: 'galleryImage',
+          title: 'Gallery Image',
+          fields: [
+            defineField({
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              options: {hotspot: true},
+              validation: (rule) => rule.required(),
+            }),
+            defineField({
+              name: 'date',
+              title: 'Date',
+              type: 'date',
+              options: {dateFormat: 'YYYY-MM-DD'},
+            }),
+            defineField({
+              name: 'caption',
+              title: 'Caption',
+              type: 'string',
+            }),
+          ],
+          preview: {
+            select: {media: 'image', title: 'caption', subtitle: 'date'},
+            prepare: ({media, title, subtitle}) => ({
+              media,
+              title: title || 'Untitled',
+              subtitle,
+            }),
+          },
+        }),
+      ],
     }),
   ],
 })
