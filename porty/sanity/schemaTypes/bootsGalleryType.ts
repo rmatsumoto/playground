@@ -22,7 +22,35 @@ export const bootsGalleryType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'body',
+      name: 'Maker',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'Model',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'Leather',
+      type: 'string',
+    }),
+    defineField({
+      name: 'Last',
+      type: 'string',
+    }),
+    defineField({
+      name: 'Sole',
+      type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'URL',
+      type: 'url',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'Image',
       type: 'array',
       of: [{type: 'image'}],
     }),
