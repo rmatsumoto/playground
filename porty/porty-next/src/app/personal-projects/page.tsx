@@ -19,7 +19,7 @@ const projects = [
 
 const PersonalProjects = () => {
   return (
-    <section className="mx-auto w-full max-w-[72rem] px-6 pt-20 pb-16 md:px-10 md:pt-32 md:pb-24">
+    <section className="mx-auto w-full max-w-[72rem] px-6 pt-20 pb-16 md:px-10 md:pt-10 md:pb-24">
       <header>
         <h1>Personal Projects</h1>
         <h3>These are my ongoing persnal projects, which have doubles as fun conding experiment and hobby</h3>

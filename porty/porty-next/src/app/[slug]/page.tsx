@@ -29,7 +29,7 @@ export default async function PostPage({
   return (
     <article>
       {/* Masthead */}
-      <header className="mx-auto w-full max-w-[72rem] px-6 pt-16 pb-12 md:px-10 md:pt-24 md:pb-16">
+      <header className="mx-auto w-full max-w-[72rem] px-6 pt-16 pb-12 md:px-10 md:pt-10 md:pb-16">
         <Link
           href="/"
           className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-foreground/50 transition-colors hover:text-accent"

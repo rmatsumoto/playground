@@ -21,7 +21,7 @@ export default async function IndexPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="mx-auto w-full max-w-[72rem] px-6 pt-20 pb-16 md:px-10 md:pt-32 md:pb-24">
+      <section className="mx-auto w-full max-w-[72rem] px-6 pt-20 pb-16 md:px-10 md:pt-10 md:pb-24">
         {eyebrow && (
           <p className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-foreground/50">
             &#x2198; {eyebrow}

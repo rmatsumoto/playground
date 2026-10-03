@@ -35,12 +35,12 @@ const TickerRun = ({ hidden = false }: { hidden?: boolean }) => (
 const Footer = () => {
   return (
     <footer className="mt-24 border-t border-rule">
-      <div className="overflow-hidden border-b border-rule bg-foreground py-3 text-background">
+      {/* <div className="overflow-hidden border-b border-rule bg-foreground py-3 text-background">
         <div className="flex w-max animate-marquee">
           <TickerRun />
           <TickerRun hidden />
         </div>
-      </div>
+      </div> */}
 
       <div className="mx-auto w-full max-w-[72rem] px-6 py-16 md:px-10">
         <div className="grid gap-12 md:grid-cols-12">

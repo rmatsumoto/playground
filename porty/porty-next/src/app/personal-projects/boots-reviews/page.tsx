@@ -35,7 +35,7 @@ const BootsReview = async () => {
   const boots = await client.fetch<BootsReviewItem[]>(BOOTS_QUERY, {}, options);
 
   return (
-    <section className="mx-auto w-full max-w-[72rem] px-6 pt-20 pb-16 md:px-10 md:pt-32 md:pb-24">
+    <section className="mx-auto w-full max-w-[72rem] px-6 pt-20 pb-16 md:px-10 md:pt-10 md:pb-24">
       <header>
         {/* @TODO add breadcrumbs */}
         <h1>Boots Review</h1>
@@ -46,9 +46,12 @@ const BootsReview = async () => {
       </header>
 
       <div id="boots_list">
-        <ul className="mt-16 grid gap-px border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-16 grid border-t border-l border-rule sm:grid-cols-2 lg:grid-cols-4">
           {boots.map(({ _id, title, slug, maker, model, last, scores }) => (
-            <li key={_id} className="bg-background transition-colors hover:bg-surface">
+            <li
+              key={_id}
+              className="border-r border-b border-rule transition-colors hover:bg-surface"
+            >
               <Link
                 href={`/personal-projects/boots-reviews/${slug}`}
                 className="flex h-full flex-col gap-3 p-8"
