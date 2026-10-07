@@ -67,21 +67,6 @@ export default async function PostPage({
           </div>
         </div>
       </div>
-
-      {/* Foot nav */}
-      <div className="border-t border-rule">
-        <div className="mx-auto w-full max-w-[72rem] px-6 py-16 md:px-10">
-          <Link
-            href="/"
-            className="group inline-flex items-baseline gap-4 font-display text-4xl tracking-tight transition-colors hover:text-accent md:text-5xl"
-          >
-            <span className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-foreground/50 transition-colors group-hover:text-accent">
-              &#x2196;
-            </span>
-            Back to the index
-          </Link>
-        </div>
-      </div>
     </article>
   );
 }

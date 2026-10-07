@@ -7,7 +7,7 @@ const projects = [
   {
     name: "Pets Gallery",
     description: "A gallery of my pets, and an excuse to play with image layouts.",
-    href: `${psPath}#`,
+    href: `${psPath}/pets-gallery`,
   },
   {
     name: "Boots Reviews",
